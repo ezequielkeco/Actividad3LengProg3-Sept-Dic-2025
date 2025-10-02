@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Estudiante.Models;
+using Actividad3LengProg3.Models;
 using System.Collections.Generic;
 using System.Linq;
 
