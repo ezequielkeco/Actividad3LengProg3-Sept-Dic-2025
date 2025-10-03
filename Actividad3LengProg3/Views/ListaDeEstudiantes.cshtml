@@ -16,11 +16,11 @@
                     <th>Nombre</th>
                     <th>Matrícula</th>
                     <th>Carrera</th>
-                    <th>Recinto</th>
+                    <th>Campus</th>
                     <th>Correo</th>
                     <th>Celular</th>
                     <th>Género</th>
-                    <th>Turno</th>
+                    <th>Tanda</th>
                     <th>Beca</th>
                     <th>Acciones</th>
                 </tr>
@@ -30,20 +30,20 @@
                 {
                     <tr>
                         <td>@e.NombreCompleto</td>
-                        <td>@e.Matricula</td>
+                        <td>@e.Matrícula</td>
                         <td>@e.Carrera</td>
-                        <td>@e.Recinto</td>
+                        <td>@e.Campus</td>
                         <td>@e.Correo</td>
                         <td>@e.Celular</td>
-                        <td>@e.Genero</td>
-                        <td>@e.Turno</td>
+                        <td>@e.Género</td>
+                        <td>@e.Tanda</td>
                         <td>
                             @(e.EstaBecado ? $"{e.PorcentajeBeca}%" : "No")
                         </td>
                         <td>
-                            <a asp-action="Editar" asp-route-matricula="@e.Matricula"
+                            <a asp-action="Editar" asp-route-matricula="@e.Matrícula"
                                class="btn btn-warning btn-sm">Editar</a>
-                            <a asp-action="Eliminar" asp-route-matricula="@e.Matricula"
+                            <a asp-action="Eliminar" asp-route-matricula="@e.Matrícula"
                                class="btn btn-danger btn-sm">Eliminar</a>
                         </td>
                     </tr>
