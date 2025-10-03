@@ -20,12 +20,12 @@ namespace Actividad3LengProg3.Controllers
             if (ModelState.IsValid)
             {
                 estudiantes.Add(estudiante);
-                return RedirectToAction("Lista");
+                return RedirectToAction("ListaDeEstudiantes");
             }
             return View("Index", estudiante);
         }
 
-        public IActionResult Lista()
+        public IActionResult ListaDeEstudiantes()
         {
             return View(estudiantes);
         }
@@ -48,7 +48,7 @@ namespace Actividad3LengProg3.Controllers
                     estudiantes.Remove(existente);
                     estudiantes.Add(estudiante);
                 }
-                return RedirectToAction("Lista");
+                return RedirectToAction("ListaDeEstudiantes");
             }
             return View(estudiante);
         }
@@ -57,7 +57,7 @@ namespace Actividad3LengProg3.Controllers
         {
             var estudiante = estudiantes.FirstOrDefault(e => e.Matricula == matricula);
             if (estudiante != null) estudiantes.Remove(estudiante);
-            return RedirectToAction("Lista");
+            return RedirectToAction("ListaDeEstudiantes");
         }
     }
 }
