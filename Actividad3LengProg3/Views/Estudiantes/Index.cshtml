@@ -5,25 +5,25 @@
 
 <div class="container mt-4">
     <div class="card shadow p-4">
-        <h3 class="mb-3">@ViewData["Title"]</h3>
+        <h3 class="mb-3 text-center text-primary">@ViewData["Title"]</h3>
         <form asp-action="Registrar" method="post" class="row g-3">
 
             <div class="col-md-6">
-                <label asp-for="NombreCompleto" class="form-label"></label>
-                <input asp-for="NombreCompleto" class="form-control" />
+                <label asp-for="NombreCompleto" class="form-label text-secondary"></label>
+                <input asp-for="NombreCompleto" class="form-control" placeholder="Nombre y Apellido"/>
                 <span asp-validation-for="NombreCompleto" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Matrícula" class="form-label"></label>
-                <input asp-for="Matrícula" class="form-control" />
+                <label asp-for="Matrícula" class="form-label text-secondary"></label>
+                <input asp-for="Matrícula" class="form-control" placeholder="SD-0000-00000" />
                 <span asp-validation-for="Matrícula" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Carrera" class="form-label"></label>
-                <select asp-for="Carrera" class="form-select">
-                    <option value="">Seleccione...</option>
+                <label asp-for="Carrera" class="form-label text-secondary"></label>
+                <select asp-for="Carrera" class="form-select cursor-pointer">
+                    <option value=""class="cursor-pointer">Seleccione una opción</option>
                     <option>Educación - Orientación Escolar</option>
                     <option>Educación Primaria 1er Ciclo</option>
                     <option>Educación Primaria 2do Ciclo</option>
@@ -45,43 +45,47 @@
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Campus" class="form-label"></label>
+                <label asp-for="Campus" class="form-label text-secondary"></label>
                 <select asp-for="Campus" class="form-select">
-                    <option value="">Seleccione...</option>
-                    <option>Recinto Norte</option>
-                    <option>Recinto Sur</option>
+                    <option value="">Seleccione opción</option>
+                    <option>Metropolitano</option>
+                    <option>Santo Domingo Oeste</option>
+                    <option>Baní</option>
+                    <option>Moca</option>
+                    <option>Las Américas</option>
+                    <option>Las Matas San Juan</option>
                 </select>
                 <span asp-validation-for="Campus" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Correo" class="form-label"></label>
-                <input asp-for="Correo" class="form-control" />
+                <label asp-for="Correo" class="form-label text-secondary"></label>
+                <input asp-for="Correo" class="form-control" placeholder="SD-0000-00000@ufhec.edu.do" />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Celular" class="form-label"></label>
-                <input asp-for="Celular" class="form-control" />
+                <label asp-for="Celular" class="form-label text-secondary"></label>
+                <input asp-for="Celular" class="form-control" placeholder="000-000-0000"/>
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Teléfono" class="form-label"></label>
-                <input asp-for="Teléfono" class="form-control" />
+                <label asp-for="Teléfono" class="form-label text-secondary"></label>
+                <input asp-for="Teléfono" class="form-control" placeholder="000-000-0000" />
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Dirección" class="form-label"></label>
-                <input asp-for="Dirección" class="form-control" />
+                <label asp-for="Dirección" class="form-label text-secondary"></label>
+                <input asp-for="Dirección" class="form-control" placeholder="Calle Nombre #0, Sector, Ciudad" />
             </div>
 
             <div class="col-md-6">
-                <label asp-for="FechaNacimiento" class="form-label"></label>
-                <input asp-for="FechaNacimiento" type="date" class="form-control" />
+                <label asp-for="FechaNacimiento" class="form-label text-secondary"></label>
+                <input asp-for="FechaNacimiento" type="text" class="form-control" placeholder="00/00/0000" />
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Género" class="form-label"></label>
+                <label asp-for="Género" class="form-label text-secondary"></label>
                 <select asp-for="Género" class="form-select">
                     <option value="">Seleccione...</option>
                     <option>Masculino</option>
@@ -90,7 +94,7 @@
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Tanda" class="form-label"></label>
+                <label asp-for="Tanda" class="form-label text-secondary"></label>
                 <select asp-for="Tanda" class="form-select">
                     <option value="">Seleccione...</option>
                     <option>Matutina</option>
@@ -101,12 +105,12 @@
 
             <div class="col-md-6">
                 <div class="form-check">
-                    <input asp-for="EstaBecado" class="form-check-input" type="checkbox" id="chkBeca" />
+                    <input asp-for="EstaBecado" class="form-check-input text-secondary" type="checkbox" id="chkBeca" />
                     <label asp-for="EstaBecado" class="form-check-label"></label>
                 </div>
                 <div id="becaField" style="display:none;">
-                    <label asp-for="PorcentajeBeca" class="form-label"></label>
-                    <input asp-for="PorcentajeBeca" class="form-control" type="number" min="0" max="100" />
+                    <label asp-for="PorcentajeBeca" class="form-label text-secondary"></label>
+                    <input asp-for="PorcentajeBeca" class="form-control" type="number" min="0" max="100" placeholder="0/100" />
                 </div>
             </div>
 
