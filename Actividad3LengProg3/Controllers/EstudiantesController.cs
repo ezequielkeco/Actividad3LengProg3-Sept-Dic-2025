@@ -53,9 +53,9 @@ namespace Actividad3LengProg3.Controllers
             return View(estudiante);
         }
 
-        public IActionResult Eliminar(string matricula)
+        public IActionResult Eliminar(string matrícula)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula == matricula);
+            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula == matrícula);
             if (estudiante != null) estudiantes.Remove(estudiante);
             return RedirectToAction("ListaDeEstudiantes");
         }
