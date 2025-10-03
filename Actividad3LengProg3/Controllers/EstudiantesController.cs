@@ -11,7 +11,7 @@ namespace Actividad3LengProg3.Controllers
 
         public IActionResult Index()
         {
-            return View(new EstudianteViewModel());
+            return View();
         }
 
         [HttpPost]
