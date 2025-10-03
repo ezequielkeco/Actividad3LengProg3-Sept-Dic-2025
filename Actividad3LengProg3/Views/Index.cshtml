@@ -1,6 +1,6 @@
 ﻿@model Actividad3LengProg3.Models.EstudianteViewModel
 @{
-    ViewData["Title"] = "Registro de Estudiante";
+    ViewData["Title"] = "Administración de estudiantes";
 }
 
 <div class="container mt-4">
@@ -15,30 +15,43 @@
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Matricula" class="form-label"></label>
-                <input asp-for="Matricula" class="form-control" />
-                <span asp-validation-for="Matricula" class="text-danger"></span>
+                <label asp-for="Matrícula" class="form-label"></label>
+                <input asp-for="Matrícula" class="form-control" />
+                <span asp-validation-for="Matrícula" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
                 <label asp-for="Carrera" class="form-label"></label>
                 <select asp-for="Carrera" class="form-select">
                     <option value="">Seleccione...</option>
-                    <option>Ingeniería de Sistemas</option>
-                    <option>Medicina</option>
-                    <option>Arquitectura</option>
+                    <option>Educación - Orientación Escolar</option>
+                    <option>Educación Primaria 1er Ciclo</option>
+                    <option>Educación Primaria 2do Ciclo</option>
+                    <option>Educación - Administración</option>
+                    <option>Lengua Española y Literatura</option>
+                    <option>Ciencias de la Comunicación</option>
+                    <option>Administración Turística</option>
+                    <option>Administración de Empresas</option>
+                    <option>Ingeniería Agronómica</option>
+                    <option>Ingeniería de Software</option>
+                    <option>Ingeniería Eléctrica</option>
+                    <option>Ingeniería Industrial</option>
+                    <option>Odontología</option>
+                    <option>Contabilidad</option>
+                    <option>Enfermería</option>
+                    <option>Derecho</option>
                 </select>
                 <span asp-validation-for="Carrera" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Recinto" class="form-label"></label>
-                <select asp-for="Recinto" class="form-select">
+                <label asp-for="Campus" class="form-label"></label>
+                <select asp-for="Campus" class="form-select">
                     <option value="">Seleccione...</option>
                     <option>Recinto Norte</option>
                     <option>Recinto Sur</option>
                 </select>
-                <span asp-validation-for="Recinto" class="text-danger"></span>
+                <span asp-validation-for="Campus" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
@@ -53,13 +66,13 @@
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Telefono" class="form-label"></label>
-                <input asp-for="Telefono" class="form-control" />
+                <label asp-for="Teléfono" class="form-label"></label>
+                <input asp-for="Teléfono" class="form-control" />
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Direccion" class="form-label"></label>
-                <input asp-for="Direccion" class="form-control" />
+                <label asp-for="Dirección" class="form-label"></label>
+                <input asp-for="Dirección" class="form-control" />
             </div>
 
             <div class="col-md-6">
@@ -68,8 +81,8 @@
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Genero" class="form-label"></label>
-                <select asp-for="Genero" class="form-select">
+                <label asp-for="Género" class="form-label"></label>
+                <select asp-for="Género" class="form-select">
                     <option value="">Seleccione...</option>
                     <option>Masculino</option>
                     <option>Femenino</option>
@@ -77,12 +90,12 @@
             </div>
 
             <div class="col-md-6">
-                <label asp-for="Turno" class="form-label"></label>
-                <select asp-for="Turno" class="form-select">
+                <label asp-for="Tanda" class="form-label"></label>
+                <select asp-for="Tanda" class="form-select">
                     <option value="">Seleccione...</option>
-                    <option>Mañana</option>
-                    <option>Tarde</option>
-                    <option>Noche</option>
+                    <option>Matutina</option>
+                    <option>Verpestina</option>
+                    <option>Nocturna</option>
                 </select>
             </div>
 
@@ -99,7 +112,7 @@
 
             <div class="col-12 d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary me-2">Registrar</button>
-                <a asp-action="Lista" class="btn btn-secondary">Cancelar</a>
+                <a asp-action="ListaDeEstudiante" class="btn btn-secondary">Cancelar</a>
             </div>
         </form>
     </div>
