@@ -10,13 +10,13 @@ namespace Actividad3LengProg3.Models
         public string NombreCompleto { get; set; }
 
         [Required, StringLength(15, MinimumLength = 6)]
-        public string Matricula { get; set; }
+        public string Matrícula { get; set; }
 
         [Required]
         public string Carrera { get; set; }
 
         [Required]
-        public string Recinto { get; set; }
+        public string Campus { get; set; }
 
         [Required, EmailAddress]
         [Display(Name = "Correo institucional")]
@@ -26,22 +26,22 @@ namespace Actividad3LengProg3.Models
         public string Celular { get; set; }
 
         [Phone, MinLength(10)]
-        public string Telefono { get; set; }
+        public string Teléfono { get; set; }
 
         [Required, StringLength(200)]
-        public string Direccion { get; set; }
+        public string Dirección { get; set; }
 
         [Required, DataType(DataType.Date)]
         [Display(Name = "Fecha de nacimiento")]
         public DateTime FechaNacimiento { get; set; }
 
         [Required]
-        public string Genero { get; set; }
+        public string Género { get; set; }
 
         [Required]
-        public string Turno { get; set; }
+        public string Tanda { get; set; }
 
-        [Display(Name = "¿Está becado?")]
+        [Display(Name = "¿Estudiante becado?")]
         public bool EstaBecado { get; set; }
 
         [Range(0, 100)]
