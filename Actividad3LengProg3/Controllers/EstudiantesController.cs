@@ -32,7 +32,7 @@ namespace Actividad3LengProg3.Controllers
 
         public IActionResult Editar(string matricula)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.Matricula == matricula);
+            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula == matricula);
             if (estudiante == null) return NotFound();
             return View(estudiante);
         }
@@ -42,7 +42,7 @@ namespace Actividad3LengProg3.Controllers
         {
             if (ModelState.IsValid)
             {
-                var existente = estudiantes.FirstOrDefault(e => e.Matricula == estudiante.Matricula);
+                var existente = estudiantes.FirstOrDefault(e => e.Matrícula == estudiante.Matrícula);
                 if (existente != null)
                 {
                     estudiantes.Remove(existente);
@@ -55,7 +55,7 @@ namespace Actividad3LengProg3.Controllers
 
         public IActionResult Eliminar(string matricula)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.Matricula == matricula);
+            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula == matricula);
             if (estudiante != null) estudiantes.Remove(estudiante);
             return RedirectToAction("ListaDeEstudiantes");
         }
