@@ -6,7 +6,6 @@ namespace Actividad3LengProg3.Models
     public class EstudianteViewModel
     {
         [Required, StringLength(100)]
-        [Display(Name = "Nombre completo")]
         public string NombreCompleto { get; set; }
 
         [Required, StringLength(15, MinimumLength = 6)]
@@ -19,7 +18,6 @@ namespace Actividad3LengProg3.Models
         public string Campus { get; set; }
 
         [Required, EmailAddress]
-        [Display(Name = "Correo institucional")]
         public string Correo { get; set; }
 
         [Phone, MinLength(10)]
@@ -32,7 +30,6 @@ namespace Actividad3LengProg3.Models
         public string Dirección { get; set; }
 
         [Required, DataType(DataType.Date)]
-        [Display(Name = "Fecha de nacimiento")]
         public DateTime FechaNacimiento { get; set; }
 
         [Required]
@@ -41,7 +38,6 @@ namespace Actividad3LengProg3.Models
         [Required]
         public string Tanda { get; set; }
 
-        [Display(Name = "¿Estudiante becado?")]
         public bool EstaBecado { get; set; }
 
         [Range(0, 100)]
