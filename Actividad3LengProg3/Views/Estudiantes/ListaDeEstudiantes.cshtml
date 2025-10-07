@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Actividad3LengProg3.Models.EstudianteViewModel>
 @{
-    ViewData["Title"] = "Lista de Estudiantes";
+    ViewData["Title"] = "Registro de Estudiantes";
 }
 
 <div class="container mt-4">
@@ -30,9 +30,6 @@
                         <td>@e.Matrícula</td>
                         <td>@e.Carrera</td>
                         <td>@e.Campus</td>
-                        <td>@e.Correo</td>
-                        <td>@e.Celular</td>
-                        <td>@e.Género</td>
                         <td>@e.Tanda</td>
                         <td>
                             @(e.EstaBecado ? $"{e.PorcentajeBeca}%" : "No")
