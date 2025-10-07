@@ -41,7 +41,6 @@ namespace Actividad3LengProg3.Models
         public bool EstaBecado { get; set; }
 
         [Range(0, 100)]
-        [Display(Name = "Porcentaje de beca")]
         public int? PorcentajeBeca { get; set; }
     }
 }
