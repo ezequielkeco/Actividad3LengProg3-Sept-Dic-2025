@@ -4,7 +4,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-danger text-white">
-                <h5 class="modal-title">Confirmar eliminación</h5>
+                <h5 class="modal-title">Confirmar eliminar estudiante</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -12,8 +12,7 @@
                 <strong>@Model.NombreCompleto</strong> con matrícula <strong>@Model.Matrícula</strong>?
             </div>
             <div class="modal-footer">
-                <a asp-action="Eliminar" asp-route-matricula="@Model.Matrícula"
-                   class="btn btn-danger">Eliminar</a>
+                <a asp-action="Eliminar" asp-route-matricula="@Model.Matrícula" class="btn btn-danger">Eliminar</a>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
