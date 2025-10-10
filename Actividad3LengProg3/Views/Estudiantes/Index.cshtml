@@ -3,6 +3,11 @@
     ViewData["Title"] = "Registro de Estudiantes";
 }
 
+@if(TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMesage"]</div>
+}
+
 <div class="container mt-4">
     <div class="card shadow p-4">
         <h3 class="mb-3 pt-3 text-center color:grey">@ViewData["Title"]</h3>
@@ -115,13 +120,19 @@
             </div>
             <div class="col-6">
                 <button type="submit" class="btn btn-primary">Registrar</button>
+                <a href="/Estudiantes/ListaDeEstudiantes" class="btn btn-outline-secondary">Mostrar registro</a>
+                <!--
                 <a asp-action="ListaDeEstudiante" class="btn btn-outline-secondary">Cancelar</a>
+                -->
             </div>
         </form>
     </div>
 </div>
 
 @section Scripts {
+
+    <parcial name ="_ValidationScriptPartial" />
+
     <script>
         document.getElementById("chkBeca").addEventListener("change", function () {
             document.getElementById("becaField").style.display = this.checked ? "block" : "none";

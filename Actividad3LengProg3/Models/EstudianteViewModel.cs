@@ -9,7 +9,7 @@ namespace Actividad3LengProg3.Models
         [StringLength(100)]
         public string NombreCompleto { get; set; }
 
-        [Required(ErrorMessage = "Debe proporcionar una dirección")]
+        [Required(ErrorMessage = "Debe proporcionar la dirección")]
         [StringLength(200)]
         public string Dirección { get; set; }
 
