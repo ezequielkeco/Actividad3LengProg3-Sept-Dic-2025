@@ -2,6 +2,7 @@
 using Actividad3LengProg3.Models;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
+using System.Reflection;
 
 namespace Actividad3LengProg3.Controllers
 {
@@ -20,7 +21,6 @@ namespace Actividad3LengProg3.Controllers
             if (ModelState.IsValid)
             {
                 estudiantes.Add(model);
-                return RedirectToAction("Index");
 
                 TempData["SuccessMessage"] = "Estudiante agregado de forma exitosa.";
                 return RedirectToAction("Index");
@@ -38,7 +38,7 @@ namespace Actividad3LengProg3.Controllers
         {
             var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(id, StringComparison.InvariantCultureIgnoreCase));
 
-            if(estudiantes != null)
+            if (estudiantes != null)
             {
                 return View(estudiante);
             }
@@ -76,11 +76,15 @@ namespace Actividad3LengProg3.Controllers
 
             return RedirectToAction("Index", model);
         }
-
+        [HttpPost]
         public IActionResult Eliminar(string matrícula)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula == matrícula);
-            if (estudiante != null) estudiantes.Remove(estudiante);
+            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(matrícula, StringComparison.InvariantCultureIgnoreCase));
+
+            if (estudiante != null)
+
+                estudiantes.Remove(estudiante);
+
             return RedirectToAction("ListaDeEstudiantes");
         }
     }

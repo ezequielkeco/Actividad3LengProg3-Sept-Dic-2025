@@ -35,7 +35,13 @@
                             @(it.EstaBecado ? $"{it.PorcentajeBeca}%" : "No")
                         </td>
                         <td>
-                            <a href="/Estudiantes/Editar/@it.Matrícula" class="btn btn-outline-secondary">Editar</a>
+                            <a href="/Estudiantes/Editar/@it.Matrícula" class="btn btn-warning">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm"
+                               data-bs-toggle="modal"
+                               data-bs-target="#EliminarModal-@it.Matrícula">
+                                Eliminar
+                            </a>
+                            <partial name="_EliminarModal" model="e" />
                         </td>
                     </tr>
                 }
