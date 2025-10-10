@@ -5,37 +5,44 @@ namespace Actividad3LengProg3.Models
 {
     public class EstudianteViewModel
     {
-        [Required, StringLength(100)]
+        [Required(ErrorMessage = "Debe proporcionar el nombre completo")]
+        [StringLength(100)]
         public string NombreCompleto { get; set; }
 
-        [Required, StringLength(15, MinimumLength = 6)]
-        public string Matrícula { get; set; }
-
-        [Required]
-        public string Carrera { get; set; }
-
-        [Required]
-        public string Campus { get; set; }
-
-        [Required, EmailAddress]
-        public string Correo { get; set; }
-
-        [Phone, MinLength(10)]
-        public string Celular { get; set; }
-
-        [Phone, MinLength(10)]
-        public string Teléfono { get; set; }
-
-        [Required, StringLength(200)]
+        [Required(ErrorMessage = "Debe proporcionar una dirección")]
+        [StringLength(200)]
         public string Dirección { get; set; }
 
-        [Required, DataType(DataType.Date)]
+        [Phone]
+        [MinLength(10)]
+        public string Celular { get; set; }
+
+        [Phone]
+        [MinLength(10)]
+        public string Teléfono { get; set; }
+
+        [Required(ErrorMessage = "Debe proporcionar la fecha de nacimiento")]
+        [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Debe seleccionar el género")]
         public string Género { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Debe proporcionar una matrícula")]
+        [StringLength(15, MinimumLength = 6)]
+        public string Matrícula { get; set; }
+
+        [Required(ErrorMessage = "Debe seleccionar la carrera")]
+        public string Carrera { get; set; }
+
+        [Required(ErrorMessage = "Debe seleccionar el campus")]
+        public string Campus { get; set; }
+
+        [Required(ErrorMessage = "Debe proporcionar el correo institucional")]
+        [EmailAddress]
+        public string Correo { get; set; }
+
+        [Required(ErrorMessage = "Debe seleccionar la tanda de estudio")]
         public string Tanda { get; set; }
 
         public bool EstaBecado { get; set; }
