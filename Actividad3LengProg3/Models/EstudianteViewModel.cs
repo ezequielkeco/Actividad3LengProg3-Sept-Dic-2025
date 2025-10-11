@@ -13,7 +13,7 @@ namespace Actividad3LengProg3.Models
         [StringLength(200)]
         public string Dirección { get; set; }
 
-        [Phone]
+        [Phone(ErrorMessage = "Debe proporcionar su número de contacto")]
         [MinLength(10)]
         public string Celular { get; set; }
 

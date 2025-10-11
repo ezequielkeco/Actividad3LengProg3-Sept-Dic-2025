@@ -36,8 +36,9 @@
                         </td>
                         <td>
                             <a href="/Estudiantes/Editar/@it.Matrícula" class="btn btn-warning">Editar</a>
-                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">Eliminar</a>
+                            <a class="btn btn-danger">Eliminar</a>
                             <!--
+                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">Eliminar</a>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">
                                 Eliminar
                             </button>
@@ -50,27 +51,24 @@
     </div>
 </div>
 
-<!---->
-
-<!-- The Modal -->
-<div class="modal" id="ModalEliminar">
+<div class="modal align-content-center" id="ModalEliminar">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content align-content-center">
 
-            <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
+                <h4>¿Desea eliminar al estudiante?</h4>
             </div>
 
-            <!-- Modal body -->
             <div class="modal-body">
-                Modal body..
+                Los datos del estudiante serán eliminados de la base de datos.
             </div>
 
-            <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar</button>
+                <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar</button>
+                <button type="submit" class="btn btn-danger" asp-action="Eliminar2">Eliminar2</button> -->
+
+                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">Eliminar</a>
             </div>
 
         </div>
