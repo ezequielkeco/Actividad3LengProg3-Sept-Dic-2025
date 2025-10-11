@@ -27,7 +27,7 @@
                 {
                     <tr>
                         <td>@it.NombreCompleto</td>
-                        <td>@it.Matrícula</td>
+                        <td>@it.Matricula</td>
                         <td>@it.Carrera</td>
                         <td>@it.Campus</td>
                         <td>@it.Tanda</td>
@@ -35,8 +35,8 @@
                             @(it.EstaBecado ? $"{it.PorcentajeBeca}%" : "No")
                         </td>
                         <td>
-                            <a href="/Estudiantes/Editar/@it.Matrícula" class="btn btn-warning">Editar</a>
-                            <a class="btn btn-danger">Eliminar</a>
+                            <a href="/Estudiantes/Editar/@it.Matricula" class="btn btn-warning">Editar</a>
+                            <a asp-action="Eliminar" class="btn btn-danger">Eliminar</a>
                             <!--
                             <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">Eliminar</a>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">
