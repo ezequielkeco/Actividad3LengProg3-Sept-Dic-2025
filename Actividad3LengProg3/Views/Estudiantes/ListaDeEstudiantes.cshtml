@@ -36,15 +36,43 @@
                         </td>
                         <td>
                             <a href="/Estudiantes/Editar/@it.Matrícula" class="btn btn-warning">Editar</a>
-                            <a asp-action="Eliminar" asp-route-matrícula="@it.Matrícula"
-                               class="btn btn-danger"
-                               onclick="return confirm('¿Estás seguro de eliminar a @it.Matrícula?');">
+                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">Eliminar</a>
+                            <!--
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalEliminar">
                                 Eliminar
-                            </a>
+                            </button>
+                            -->
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
+    </div>
+</div>
+
+<!---->
+
+<!-- The Modal -->
+<div class="modal" id="ModalEliminar">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar</button>
+            </div>
+
+        </div>
     </div>
 </div>
