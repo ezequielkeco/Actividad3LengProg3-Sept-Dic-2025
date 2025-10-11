@@ -15,7 +15,7 @@
         <form asp-action="Registrar" method="post" class="row g-3 mt-4">
             <div class="col-md-6">
                 <label asp-for="NombreCompleto" class="form-label text-secondary">Nombre Completo</label>
-                <input asp-for="NombreCompleto" class="form-control" placeholder="Nombre y Apellido"/>
+                <input asp-for="NombreCompleto" class="form-control" placeholder="Nombre y Apellido" />
                 <span asp-validation-for="NombreCompleto" class="text-danger"></span>
             </div>
 
@@ -57,7 +57,7 @@
             <div class="col-md-6">
                 <label asp-for="Carrera" class="form-label text-secondary">Carrera</label>
                 <select asp-for="Carrera" class="form-select" style="cursor:pointer !important">
-                    <option value=""class="cursor-pointer"> --- </option>
+                    <option value="" class="cursor-pointer"> --- </option>
                     <option>Educación - Orientación Escolar</option>
                     <option>Educación Primaria 1er Ciclo</option>
                     <option>Educación Primaria 2do Ciclo</option>
@@ -128,7 +128,7 @@
 
 @section Scripts {
 
-    <parcial name ="_ValidationScriptPartial" />
+    <parcial name="_ValidationScriptPartial" />
 
     <script>
         document.getElementById("chkBeca").addEventListener("change", function () {
@@ -136,4 +136,3 @@
         });
     </script>
 }
-

@@ -51,4 +51,3 @@ namespace Actividad3LengProg3.Models
         public int? PorcentajeBeca { get; set; }
     }
 }
-

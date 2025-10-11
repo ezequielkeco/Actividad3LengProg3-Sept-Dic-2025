@@ -67,7 +67,7 @@ namespace Actividad3LengProg3.Controllers
                     estudiante.Género = model.Género;
                     estudiante.Tanda = model.Tanda;
 
-                    TempData["SuccessMessage"] = "El estudiante ha sido editado de forma exitosa.";
+                    TempData["SuccessMessage"] = "Información del estudiante editada de forma exitosa.";
                     return View(estudiante);
                 }
 
@@ -77,9 +77,9 @@ namespace Actividad3LengProg3.Controllers
             return RedirectToAction("Index", model);
         }
         [HttpPost]
-        public IActionResult Eliminar(string matrícula)
+        public IActionResult Eliminar(EstudianteViewModel model)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(matrícula, StringComparison.InvariantCultureIgnoreCase));
+            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(model.Matrícula, StringComparison.InvariantCultureIgnoreCase));
 
             if (estudiante != null)
 
@@ -89,4 +89,3 @@ namespace Actividad3LengProg3.Controllers
         }
     }
 }
-
