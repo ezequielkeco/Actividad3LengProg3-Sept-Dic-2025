@@ -36,7 +36,7 @@ namespace Actividad3LengProg3.Controllers
         [HttpGet]
         public IActionResult Editar(string id)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(id, StringComparison.InvariantCultureIgnoreCase));
+            var estudiante = estudiantes.FirstOrDefault(e => e.Matricula.Equals(id, StringComparison.InvariantCultureIgnoreCase));
 
             if (estudiantes != null)
             {
@@ -52,19 +52,19 @@ namespace Actividad3LengProg3.Controllers
             if (ModelState.IsValid)
             {
 
-                var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(model.Matrícula, StringComparison.InvariantCultureIgnoreCase));
+                var estudiante = estudiantes.FirstOrDefault(e => e.Matricula.Equals(model.Matricula, StringComparison.InvariantCultureIgnoreCase));
 
                 if (estudiantes != null)
                 {
                     estudiante.NombreCompleto = model.NombreCompleto;
                     estudiante.Carrera = model.Carrera;
                     estudiante.Correo = model.Correo;
-                    estudiante.Dirección = model.Dirección;
+                    estudiante.Direccion = model.Direccion;
                     estudiante.Campus = model.Campus;
                     estudiante.FechaNacimiento = model.FechaNacimiento;
                     estudiante.Celular = model.Celular;
-                    estudiante.Teléfono = model.Teléfono;
-                    estudiante.Género = model.Género;
+                    estudiante.Telefono = model.Telefono;
+                    estudiante.Genero = model.Genero;
                     estudiante.Tanda = model.Tanda;
 
                     TempData["SuccessMessage"] = "Información del estudiante editada de forma exitosa.";
@@ -79,7 +79,7 @@ namespace Actividad3LengProg3.Controllers
         [HttpPost]
         public IActionResult Eliminar(string Martícula)
         {
-                var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(e.Matrícula, StringComparison.InvariantCultureIgnoreCase));
+                var estudiante = estudiantes.FirstOrDefault(e => e.Matricula.Equals(e.Matricula, StringComparison.InvariantCultureIgnoreCase));
 
                 if (estudiante != null)
                 {
