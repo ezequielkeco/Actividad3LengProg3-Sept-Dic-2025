@@ -11,7 +11,7 @@ namespace Actividad3LengProg3.Models
 
         [Required(ErrorMessage = "Debe proporcionar la dirección")]
         [StringLength(200)]
-        public string Dirección { get; set; }
+        public string Direccion { get; set; }
 
         [Phone(ErrorMessage = "Debe proporcionar su número de contacto")]
         [MinLength(10)]
@@ -19,18 +19,18 @@ namespace Actividad3LengProg3.Models
 
         [Phone]
         [MinLength(10)]
-        public string Teléfono { get; set; }
+        public string Telefono { get; set; }
 
         [Required(ErrorMessage = "Debe proporcionar la fecha de nacimiento")]
         [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
 
         [Required(ErrorMessage = "Debe seleccionar el género")]
-        public string Género { get; set; }
+        public string Genero { get; set; }
 
         [Required(ErrorMessage = "Debe proporcionar una matrícula")]
         [StringLength(15, MinimumLength = 6)]
-        public string Matrícula { get; set; }
+        public string Matricula { get; set; }
 
         [Required(ErrorMessage = "Debe seleccionar la carrera")]
         public string Carrera { get; set; }
