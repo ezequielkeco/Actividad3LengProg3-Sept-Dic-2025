@@ -77,15 +77,16 @@ namespace Actividad3LengProg3.Controllers
             return RedirectToAction("Index", model);
         }
         [HttpPost]
-        public IActionResult Eliminar(EstudianteViewModel model)
+        public IActionResult Eliminar(string Martícula)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(model.Matrícula, StringComparison.InvariantCultureIgnoreCase));
+                var estudiante = estudiantes.FirstOrDefault(e => e.Matrícula.Equals(e.Matrícula, StringComparison.InvariantCultureIgnoreCase));
 
-            if (estudiante != null)
+                if (estudiante != null)
+                {
+                    estudiantes.Remove(estudiante);
+                }
 
-                estudiantes.Remove(estudiante);
-
-            return RedirectToAction("ListaDeEstudiantes");
+                return RedirectToAction("ListaDeEstudiantes");
         }
     }
 }
