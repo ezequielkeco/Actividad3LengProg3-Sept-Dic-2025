@@ -77,9 +77,9 @@ namespace Actividad3LengProg3.Controllers
             return RedirectToAction("Index", model);
         }
         [HttpPost]
-        public IActionResult Eliminar(string Martícula)
+        public IActionResult Eliminar(EstudianteViewModel model)
         {
-                var estudiante = estudiantes.FirstOrDefault(e => e.Matricula.Equals(e.Matricula, StringComparison.InvariantCultureIgnoreCase));
+                var estudiante = estudiantes.FirstOrDefault(e => e.Matricula.Equals(model.Matricula, StringComparison.InvariantCultureIgnoreCase));
 
                 if (estudiante != null)
                 {

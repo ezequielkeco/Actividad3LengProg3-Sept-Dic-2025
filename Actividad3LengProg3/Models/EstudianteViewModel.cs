@@ -5,15 +5,15 @@ namespace Actividad3LengProg3.Models
 {
     public class EstudianteViewModel
     {
-        [Required(ErrorMessage = "Debe proporcionar el nombre completo")]
+        [Required(ErrorMessage = "Debe proporcionar su nombre completo")]
         [StringLength(100)]
         public string NombreCompleto { get; set; }
 
-        [Required(ErrorMessage = "Debe proporcionar la dirección")]
+        [Required]
         [StringLength(200)]
         public string Direccion { get; set; }
 
-        [Phone(ErrorMessage = "Debe proporcionar su número de contacto")]
+        [Phone]
         [MinLength(10)]
         public string Celular { get; set; }
 
@@ -21,28 +21,28 @@ namespace Actividad3LengProg3.Models
         [MinLength(10)]
         public string Telefono { get; set; }
 
-        [Required(ErrorMessage = "Debe proporcionar la fecha de nacimiento")]
+        [Required]
         [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
 
-        [Required(ErrorMessage = "Debe seleccionar el género")]
+        [Required]
         public string Genero { get; set; }
 
-        [Required(ErrorMessage = "Debe proporcionar una matrícula")]
+        [Required]
         [StringLength(15, MinimumLength = 6)]
         public string Matricula { get; set; }
 
-        [Required(ErrorMessage = "Debe seleccionar la carrera")]
+        [Required]
         public string Carrera { get; set; }
 
-        [Required(ErrorMessage = "Debe seleccionar el campus")]
+        [Required]
         public string Campus { get; set; }
 
-        [Required(ErrorMessage = "Debe proporcionar el correo institucional")]
+        [Required]
         [EmailAddress]
         public string Correo { get; set; }
 
-        [Required(ErrorMessage = "Debe seleccionar la tanda de estudio")]
+        [Required]
         public string Tanda { get; set; }
 
         public bool EstaBecado { get; set; }

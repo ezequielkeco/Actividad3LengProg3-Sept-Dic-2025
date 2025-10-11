@@ -16,17 +16,19 @@
             <div class="col-md-6">
                 <label asp-for="NombreCompleto" class="form-label text-secondary">Nombre Completo</label>
                 <input asp-for="NombreCompleto" class="form-control" placeholder="Nombre y Apellido"/>
-                <span asp-validation-for="NombreCompleto" class="text-danger"></span>
+                
             </div>
 
             <div class="col-md-6">
                 <label asp-for="Direccion" class="form-label text-secondary">Dirección</label>
                 <input asp-for="Direccion" class="form-control" placeholder="Calle Nombre #0, Sector, Ciudad" />
+                <span asp-validation-for="Direccion" class="text-danger">Debe proporcionar la dirección</span>
             </div>
 
             <div class="col-md-6">
                 <label asp-for="Celular" class="form-label text-secondary">Celular</label>
                 <input asp-for="Celular" class="form-control" placeholder="000-000-0000" />
+                <span asp-validation-for="Celular" class="text-danger">Debe proporcionar su número de contacto</span>
             </div>
 
             <div class="col-md-6">
@@ -37,6 +39,7 @@
             <div class="col-md-6">
                 <label asp-for="FechaNacimiento" class="form-label text-secondary">Fecha de nacimiento</label>
                 <input asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger">Debe proporcionar la fecha de nacimiento</span>
             </div>
 
             <div class="col-md-6">
@@ -46,12 +49,13 @@
                     <option>Masculino</option>
                     <option>Femenino</option>
                 </select>
+                <span asp-validation-for="Genero" class="text-danger">Debe seleccionar el género</span>
             </div>
 
             <div class="col-md-6">
                 <label asp-for="Matricula" class="form-label text-secondary">Matrícula</label>
                 <input asp-for="Matricula" class="form-control" placeholder="SD-0000-00000" />
-                <span asp-validation-for="Matricula" class="text-danger"></span>
+                <span asp-validation-for="Matricula" class="text-danger">Debe proporcionar una matrícula</span>
             </div>
 
             <div class="col-md-6">
@@ -75,7 +79,7 @@
                     <option>Enfermería</option>
                     <option>Derecho</option>
                 </select>
-                <span asp-validation-for="Carrera" class="text-danger"></span>
+                <span asp-validation-for="Carrera" class="text-danger">Debe seleccionar la carrera</span>
             </div>
 
             <div class="col-md-6">
@@ -89,13 +93,13 @@
                     <option>Las Américas</option>
                     <option>Las Matas San Juan</option>
                 </select>
-                <span asp-validation-for="Campus" class="text-danger"></span>
+                <span asp-validation-for="Campus" class="text-danger">Debe seleccionar el campus</span>
             </div>
 
             <div class="col-md-6">
                 <label asp-for="Correo" class="form-label text-secondary">Correo Institucional</label>
                 <input asp-for="Correo" class="form-control" placeholder="SD-0000-00000@ufhec.edu.do" />
-                <span asp-validation-for="Correo" class="text-danger"></span>
+                <span asp-validation-for="Correo" class="text-danger">Debe proporcionar el correo institucional</span>
             </div>
 
             <div class="col-md-6">
@@ -106,6 +110,7 @@
                     <option>Verpestina</option>
                     <option>Nocturna</option>
                 </select>
+                <span asp-validation-for="Tanda" class="text-danger">Debe seleccionar la tanda de estudio</span>
             </div>
 
             <div class="col-md-5">
@@ -127,7 +132,7 @@
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+
     <script>
         document.getElementById("chkBeca").addEventListener("change", function () {
         document.getElementById("becaField").style.display = this.checked ? "block" : "none";
